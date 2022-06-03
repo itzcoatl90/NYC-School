@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">NYC Schools</string>
+    <string name="what_a_terrible_failure">What a Terrible Failure!</string>
+    <string name="expecting_answers">We were expecting the server answered our questions, but instead we received this message from them:</string>
+    <string name="will_try_again">OK, will try again later</string>
+    <string name="no_message">No message</string>
+    <string name="city_and_state">%1$s, %2$s</string>
+    <string name="sat_results">SAT Results:</string>
+    <string name="location">Location:</string>
+    <string name="num_of_sat_test_takers"># of SAT test takers:</string>
+    <string name="sat_critical_reading_avg_score">Critical reading average score:</string>
+    <string name="sat_writing_avg_score">Writing average score:</string>
+    <string name="sat_math_avg_score">Math average score:</string>
+    <string name="contact">Contact:</string>
+    <string name="go_to_website">Go To Website</string>
+</resources>
