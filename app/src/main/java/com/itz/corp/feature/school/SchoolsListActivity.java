@@ -46,6 +46,7 @@ public class SchoolsListActivity extends AppCompatActivity implements SchoolList
         binding = ActivitySchoolsListBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        setSupportActionBar(binding.appToolbar);
         schoolsListViewModel.getNetworkData().observe(this, getObserverAndDataBinder());
     }
 

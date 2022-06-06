@@ -57,7 +57,11 @@ public class SATResultViewModel implements Callback<List<SATResult>> {
          * side, which means we need that ugly ".get(0)" that you are seeing here.
          * */
         assert response.body() != null;
-        satResultNetworkData.postValue(new SATResultNetworkData(response.body().get(0), null));
+        if (response.body().isEmpty()) {
+            onFailure(call, new Exception("Empty response was retrieved."));
+        } else {
+            satResultNetworkData.postValue(new SATResultNetworkData(response.body().get(0), null));
+        }
     }
 
     @Override

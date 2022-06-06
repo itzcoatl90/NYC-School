@@ -43,10 +43,26 @@ public class SATResultActivity extends AppCompatActivity {
         binding = ActivitySatResultBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        setupToolBar();
+
         school = (School) getIntent().getSerializableExtra(School.SCHOOL_KEY);
         displaySchoolInfo(school);
 
         satResultViewModel.getNetworkData().observe(this, getObserverAndDataBinder());
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
+    }
+
+    private void setupToolBar() {
+        setSupportActionBar(binding.appToolbar);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setDisplayShowHomeEnabled(true);
+        }
     }
 
     private Observer<SATResultNetworkData> getObserverAndDataBinder() {
